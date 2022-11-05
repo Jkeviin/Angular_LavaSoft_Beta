@@ -86,13 +86,10 @@ $color-secondary: #2a3d45;
 html {
   @include reset-pm;
   position: relative;
-  min-height: 100vh;
 }
 
 body {
   @include reset-pm;
-  margin: 0;
-  margin-bottom: 40px;
 }
 
 .container-nav {
@@ -180,53 +177,89 @@ body {
 /* //////////////////////////////////////////////// */
 
 footer {
-  background-color: black;
+  background-color: $color-secondary;
   position: absolute;
   bottom: 0;
   width: 100%;
-  height: 10em;
+  height: 9em;
   color: white;
   display: flex;
   flex-direction: column;
+  padding: 0 11em;
 
   .informacion{
     /* Grid, una sola fila, 4 columnas */
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
     grid-template-rows: 1fr;
+    grid-template-columns: 1fr 1fr 2fr 1fr;
     /* Espacio entre columnas */
-    grid-column-gap: 1em;
+    grid-column-gap: 2em;
     /* Espacio entre filas */
     grid-row-gap: 1em;
     /* Espacio alrededor de todo */
     padding: 1em;
+    padding-bottom: 0.9em;
 
     .col{
       h3{
-        font-size: 1em;
+        font-size: 0.8em;
         margin-bottom: 0.5em;
+        /* Quitar bold */
+        font-weight: 100;
       }
-      
+
       p{
-        font-size: 0.5em;
-        text-align: center;
+        font-size: 0.6em;
+        margin-bottom: 10px;
       }
 
       ul{
         list-style: none;
         padding: 0;
         margin: 0;
+
+        &.redes{
+          display: flex;
+          flex-direction: row;
+          li{
+            padding-left: 8px;
+            a{
+              font-size: 1.9em;
+              color: rgba(255, 255, 255, 0.841);
+            }
+          }
+        }
+
         li{
-          margin-bottom: 0.5em;
+          margin-bottom: 0.2em;
           a{
             color: white;
             text-decoration: none;
-            font-size: 0.5em;
+            font-size: 0.7em;
+            /* Bold */
+            font-weight: 400;
           }
         }
       }
     }
 
+  }
+
+  .credenciales{
+    text-align: center;
+    font-size: 0.75em;
+    color: rgba(255, 255, 255, 0.476);
+
+    ul{
+      display: flex;
+      flex-direction: row;
+      justify-content: space-around;
+      li{
+        a{
+          color:rgba(255, 255, 255, 0.476);
+        }
+      }
+    }
   }
 }
 
