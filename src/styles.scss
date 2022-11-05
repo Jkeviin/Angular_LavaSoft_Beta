@@ -1,0 +1,232 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;1,100;1,300;1,400;1,500&display=swap");
+
+$color-primary: #058ed9;
+$color-secondary: #2a3d45;
+
+@mixin reset-pm {
+  padding: 0;
+  margin: 0;
+}
+/* //////////////////////////////////////////////// */
+/* HEADER */
+
+@mixin nav($con-borde, $color) {
+  color: #fff;
+  font-size: 14px;
+  padding: 7px 13px;
+  transition: 0.3s;
+  border-radius: 0;
+  text-transform: uppercase;
+  text-decoration: none;
+  border: none;
+  cursor: pointer;
+  /* Fondo transparente */
+  background: transparent;
+
+  // transicion para que el border button se abra de adentro hacia afuera
+
+
+  @if ($con-borde== "true") {
+    border-radius: 4px;
+    border: 1px solid $color;
+
+    &:hover {
+      filter: brightness(1.1);
+}
+
+    &.create {
+      background-color: $color;
+
+      &:hover {
+        // resaltar un poco
+        filter: brightness(1.1);
+      }
+    }
+  } /* sino */
+  @else {
+
+    .hover-underline-animation {
+      position: relative;
+      padding-bottom: 3px;
+    }
+
+    .hover-underline-animation:after {
+      content: "";
+      position: absolute;
+      width: 100%;
+      transform: scaleX(0);
+      height: 2px;
+      bottom: 0;
+      left: 0;
+      background-color: $color;
+      transform-origin: bottom right;
+      transition: transform 0.25s ease-out;
+      -webkit-transform: scaleX(0);
+      -moz-transform: scaleX(0);
+      -ms-transform: scaleX(0);
+      -o-transform: scaleX(0);
+    }
+  }
+
+}
+
+* {
+  box-sizing: border-box;
+  @include reset-pm;
+  /* Quitar seleccion */
+  user-select: none;
+  /* Quitar arrastrar */
+  -webkit-user-drag: none;
+
+  /* Quitar decoracion UL, A, LI */
+  text-decoration: none;
+  list-style: none;
+}
+
+html {
+  @include reset-pm;
+  position: relative;
+  min-height: 100vh;
+}
+
+body {
+  @include reset-pm;
+  margin: 0;
+  margin-bottom: 40px;
+}
+
+.container-nav {
+  background-color: $color-secondary;
+  width: 100%;
+  height: 80px;
+  position: fixed;
+  top: 0;
+  z-index: 100;
+
+  .button {
+    margin: 0;
+    background: transparent;
+    border: none;
+  }
+
+  /* button styling */
+  .button {
+    --border-right: 6px;
+    --fs-size: 1.5em;
+    letter-spacing: 3px;
+    text-decoration: none;
+    font-size: var(--fs-size);
+    font-family: "Arial";
+    position: relative;
+    text-transform: uppercase;
+    color: transparent;
+    -webkit-text-stroke: 1px $color-primary;
+    padding: 26px 0px;
+  }
+  /* this is the text, when you hover on button */
+  .hover-text {
+    position: absolute;
+    box-sizing: border-box;
+    content: attr(data-text);
+    color: white;
+    width: 0%;
+    inset: 0;
+    border-right: var(--border-right) solid white;
+    overflow: hidden;
+    transition: 0.5s;
+    -webkit-text-stroke: 1px white;
+    padding: 26px 0px;
+  }
+  /* hover */
+  .button:hover .hover-text {
+    width: 100%;
+    filter: drop-shadow(0 0 23px white);
+    -webkit-filter: drop-shadow(0 0 23px white);
+  }
+
+  .nav {
+    float: right;
+    margin-right: 20px;
+
+    li {
+      display: inline-block;
+      line-height: 75px;
+      margin: 0 5px;
+
+
+      a {
+
+        @include nav("false", $color-primary);
+
+        &:hover .hover-underline-animation:after, .active::after {
+          transform: scaleX(1);
+          transform-origin: bottom left;
+        }
+      }
+    }
+
+    &.nav-clientes {
+      margin-left: 20px;
+      li {
+        a {
+          @include nav("true", $color-primary);
+        }
+      }
+    }
+  }
+}
+
+/* HEADER */
+/* //////////////////////////////////////////////// */
+
+footer {
+  background-color: black;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 10em;
+  color: white;
+  display: flex;
+  flex-direction: column;
+
+  .informacion{
+    /* Grid, una sola fila, 4 columnas */
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: 1fr;
+    /* Espacio entre columnas */
+    grid-column-gap: 1em;
+    /* Espacio entre filas */
+    grid-row-gap: 1em;
+    /* Espacio alrededor de todo */
+    padding: 1em;
+
+    .col{
+      h3{
+        font-size: 1em;
+        margin-bottom: 0.5em;
+      }
+      
+      p{
+        font-size: 0.5em;
+        text-align: center;
+      }
+
+      ul{
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        li{
+          margin-bottom: 0.5em;
+          a{
+            color: white;
+            text-decoration: none;
+            font-size: 0.5em;
+          }
+        }
+      }
+    }
+
+  }
+}
+
