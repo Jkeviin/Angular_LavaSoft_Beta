@@ -1,5 +1,3 @@
-@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;1,100;1,300;1,400;1,500&display=swap");
-
 $color-primary: #058ed9;
 $color-secondary: #2a3d45;
 
@@ -7,8 +5,45 @@ $color-secondary: #2a3d45;
   padding: 0;
   margin: 0;
 }
-/* //////////////////////////////////////////////// */
-/* HEADER */
+
+@mixin selectOption-buscador{
+  /* select */
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  background: url(https://cdn-icons-png.flaticon.com/512/32/32195.png) no-repeat 95% 50%;
+  background-size: 10px;
+  border: 0;
+  border-bottom: 1px solid #ccc;
+  border-radius: 0;
+  padding: 10px 15px;
+  width: 100%;
+  font-size: 14px;
+  color: #333;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 300;
+  line-height: 1.5;
+  height: 40px;
+  padding-left: 5px;
+  cursor: pointer;
+  &:focus {
+    outline: none;
+  }
+  /* arrow */
+  &::-ms-expand {
+    display: none;
+  }
+
+  /* option */
+  option {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 300;
+    font-size: 14px;
+    color: #333;
+  }
+
+}
+
 
 @mixin nav($con-borde, $color) {
   color: #fff;
@@ -77,20 +112,21 @@ $color-secondary: #2a3d45;
   user-select: none;
   /* Quitar arrastrar */
   -webkit-user-drag: none;
-
   /* Quitar decoracion UL, A, LI */
   text-decoration: none;
   list-style: none;
 }
 
-html {
+app-root {
   @include reset-pm;
-  position: relative;
+  font-family: 'Roboto', sans-serif;
+  display: grid;
+  min-height: 100vh;
+  grid-template-rows:auto 1fr auto;
 }
 
-body {
-  @include reset-pm;
-}
+/* //////////////////////////////////////////////// */
+/* HEADER */
 
 .container-nav {
   background-color: $color-secondary;
@@ -176,29 +212,133 @@ body {
 /* HEADER */
 /* //////////////////////////////////////////////// */
 
+
+/* MAIN */
+
+.main-container{
+  padding-top: 80px;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  /* Justify arriba */
+  flex-direction: column;
+  .header{
+    background-color: #111B1F;
+    padding: 40px;
+    padding-bottom: 0;
+    margin-bottom: 40px;
+      .title{
+        text-align: center;
+        font-size: 30px;
+        font-weight: 500;
+        margin-bottom: 10px;
+        padding: 50px;
+
+        h1{
+          margin: 0;
+          color: $color-primary
+        }
+        h3{
+          margin: 0;
+          color: #fff;
+        }
+      }
+
+      .buscador{
+
+        width: 100%;
+        max-width: 1000px;
+        height: 80px;
+        margin: -40px auto;  // Esto es para centrar el buscador en el header
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-top: 10px;
+
+        .seccion-input{
+          width: 100%;
+          height: 100%;
+          display: flex;
+          align-items: center;
+          justify-content: space-around;
+          background-color: #fff;
+          border-radius: 5px;
+          padding: 0 10px;
+          box-shadow: 0 0 10px rgba(0,0,0,0.2);
+          transition: 0.3s;
+
+          .filtro{
+            select{
+              @include selectOption-buscador;
+            }
+            &.date{
+              input[type="date"]{
+                margin-top: 5px;
+                border: 1px solid #ccc;
+                padding: 5px;
+                border-radius: 5px;
+                &:hover{
+                  border: 1px solid $color-primary;
+                  cursor: pointer;
+                  /* Quitar marcado */
+                }
+                &:focus{
+                  outline: none;
+                }
+              }
+            }
+          }
+
+          p{
+            text-align: initial;
+          }
+
+          input[type="submit"]{
+            /* Btn */
+            padding: 10px;
+            border: none;
+            background-color: $color-primary;
+            color: #fff;
+            border-radius: 5px;
+            
+            &:hover{
+              cursor: pointer;
+              background-color: #fff;
+              color: $color-primary;
+              box-shadow: 0 0 10px rgba(0,0,0,0.2);
+            }
+          }
+
+        }
+      }
+  }
+}
+
+/* FOOTER */
 footer {
   background-color: $color-secondary;
-  position: absolute;
-  bottom: 0;
+  /* Tamaño se agranda dependiendo el contenido */
+
   width: 100%;
-  height: 9em;
+  /* En una variable guardar el tamaño actual de height */
   color: white;
   display: flex;
   flex-direction: column;
-  padding: 0 11em;
+  /* Padding responsive */
+  padding: 10px;
 
   .informacion{
-    /* Grid, una sola fila, 4 columnas */
     display: grid;
     grid-template-rows: 1fr;
+    /* grid-template-columns de 4 columnas con la 3ra columna mas grande */
     grid-template-columns: 1fr 1fr 2fr 1fr;
     /* Espacio entre columnas */
-    grid-column-gap: 2em;
+    grid-column-gap: 1em;
     /* Espacio entre filas */
     grid-row-gap: 1em;
-    /* Espacio alrededor de todo */
-    padding: 1em;
-    padding-bottom: 0.9em;
+    /* padding automatico */
+    padding:  1em 10%;
+    padding-top: 0.5em;
 
     .col{
       h3{
@@ -242,7 +382,6 @@ footer {
         }
       }
     }
-
   }
 
   .credenciales{
