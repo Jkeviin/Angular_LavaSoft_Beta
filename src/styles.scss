@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
 $color-primary: #058ed9;
 $color-secondary: #2a3d45;
 
@@ -20,7 +22,6 @@ $color-secondary: #2a3d45;
   width: 100%;
   font-size: 14px;
   color: #333;
-  font-family: 'Roboto', sans-serif;
   font-weight: 300;
   line-height: 1.5;
   height: 40px;
@@ -36,7 +37,6 @@ $color-secondary: #2a3d45;
 
   /* option */
   option {
-    font-family: 'Roboto', sans-serif;
     font-weight: 300;
     font-size: 14px;
     color: #333;
@@ -47,7 +47,7 @@ $color-secondary: #2a3d45;
 
 @mixin nav($con-borde, $color) {
   color: #fff;
-  font-size: 14px;
+  font-size: 1rem;
   padding: 7px 13px;
   transition: 0.3s;
   border-radius: 0;
@@ -61,7 +61,7 @@ $color-secondary: #2a3d45;
   // transicion para que el border button se abra de adentro hacia afuera
 
 
-  @if ($con-borde== "true") {
+  @if ($con-borde == "true") {
     border-radius: 4px;
     border: 1px solid $color;
 
@@ -131,10 +131,11 @@ app-root {
 .container-nav {
   background-color: $color-secondary;
   width: 100%;
-  height: 80px;
+  height: 6rem;
   position: fixed;
   top: 0;
   z-index: 100;
+  align-items: center;
 
   .button {
     margin: 0;
@@ -144,12 +145,9 @@ app-root {
 
   /* button styling */
   .button {
-    --border-right: 6px;
-    --fs-size: 1.5em;
     letter-spacing: 3px;
     text-decoration: none;
-    font-size: var(--fs-size);
-    font-family: "Arial";
+    font-size: 1.5rem;
     position: relative;
     text-transform: uppercase;
     color: transparent;
@@ -164,7 +162,7 @@ app-root {
     color: white;
     width: 0%;
     inset: 0;
-    border-right: var(--border-right) solid white;
+    border-right: 0.6rem solid white;
     overflow: hidden;
     transition: 0.5s;
     -webkit-text-stroke: 1px white;
@@ -180,13 +178,12 @@ app-root {
   .nav {
     float: right;
     margin-right: 20px;
-
+    height: 6rem;
     li {
       display: inline-block;
       line-height: 75px;
       margin: 0 5px;
-
-
+      height: 6rem;
       a {
 
         @include nav("false", $color-primary);
@@ -216,7 +213,7 @@ app-root {
 /* MAIN */
 
 .main-container{
-  padding-top: 80px;
+  padding-top: 6rem;
   width: 100%;
   height: 100%;
   display: flex;
@@ -228,19 +225,25 @@ app-root {
     padding-bottom: 0;
     margin-bottom: 40px;
       .title{
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        justify-content: space-evenly;
         text-align: center;
-        font-size: 30px;
+        font-size: 3rem;
         font-weight: 500;
-        margin-bottom: 10px;
-        padding: 50px;
+        min-height: 15rem;
 
         h1{
           margin: 0;
-          color: $color-primary
+          color: $color-primary;
+          font-size: 4rem;
         }
         h3{
           margin: 0;
           color: #fff;
+          font-size: 2rem;
+          font-weight: 200;
         }
       }
 
@@ -248,7 +251,7 @@ app-root {
 
         width: 100%;
         max-width: 1000px;
-        height: 80px;
+        height: 7rem;
         margin: -40px auto;  // Esto es para centrar el buscador en el header
         display: flex;
         align-items: center;
@@ -277,6 +280,7 @@ app-root {
                 border: 1px solid #ccc;
                 padding: 5px;
                 border-radius: 5px;
+                font-size: 1rem;
                 &:hover{
                   border: 1px solid $color-primary;
                   cursor: pointer;
@@ -300,7 +304,7 @@ app-root {
             background-color: $color-primary;
             color: #fff;
             border-radius: 5px;
-            
+            font-size: 1rem;
             &:hover{
               cursor: pointer;
               background-color: #fff;
@@ -314,6 +318,49 @@ app-root {
   }
 }
 
+/*Paso a Paso*/
+
+.principal{
+  min-width: 600px;
+  max-width: 1000px;
+  margin: 0 auto;
+  .paso-paso{
+    width: 100%;
+    margin: 10px;
+    .title-paso{
+      h2{
+        color: $color-primary;
+      }
+    }
+    .info-paso{
+      display: flex;
+      width: 100%;
+      justify-content: space-around;
+      text-align: center;
+      .paso{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 80px;
+        .icon-paso{
+          width: 50px;
+          height: 50px;
+          border-radius: 50%;
+          -webkit-border-radius: 50%;
+          -moz-border-radius: 50%;
+          -ms-border-radius: 50%;
+          -o-border-radius: 50%;
+          background-color: #D9D9D9;
+        }
+        h4{
+          color: $color-primary;
+        }
+      }
+    }
+  }
+}
+
+/* MAIN */
 /* FOOTER */
 footer {
   background-color: $color-secondary;
@@ -342,15 +389,16 @@ footer {
 
     .col{
       h3{
-        font-size: 0.8em;
+        font-size: 0.9em;
         margin-bottom: 0.5em;
         /* Quitar bold */
         font-weight: 100;
       }
 
       p{
-        font-size: 0.6em;
+        font-size: 0.7em;
         margin-bottom: 10px;
+        font-weight: 150;
       }
 
       ul{
@@ -366,6 +414,10 @@ footer {
             a{
               font-size: 1.9em;
               color: rgba(255, 255, 255, 0.841);
+
+              &:hover{
+                color: $color-primary;
+              }
             }
           }
         }
@@ -380,6 +432,18 @@ footer {
             font-weight: 400;
           }
         }
+      }
+
+      select{
+        background-color: #111B1F;
+        color: white;
+        padding: 5px;
+        border: none;
+        border-radius: 20px;
+        -webkit-border-radius: 20px;
+        -moz-border-radius: 20px;
+        -ms-border-radius: 20px;
+        -o-border-radius: 20px;
       }
     }
   }
