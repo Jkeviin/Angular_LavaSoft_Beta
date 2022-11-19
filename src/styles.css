@@ -13,7 +13,7 @@
   list-style: none;
 }
 
-app-root {
+app-root, app-principal, app-pfaq {
   padding: 0;
   margin: 0;
   font-family: "Roboto", sans-serif;
@@ -33,7 +33,6 @@ app-root {
   z-index: 100;
   align-items: center;
   /* button styling */
-  /* this is the text, when you hover on button */
   /* hover */
 }
 .container-nav .button {
@@ -48,37 +47,45 @@ app-root {
   position: relative;
   text-transform: uppercase;
   color: transparent;
-  -webkit-text-stroke: 1px #058ed9;
-  padding: 26px 0px;
+  -webkit-text-stroke: 2px #058ed9;
+  height: 100%;
+}
+.container-nav .actual-text {
+  transition: 0.5s;
+  width: 0%;
 }
 .container-nav .hover-text {
   position: absolute;
-  box-sizing: border-box;
   content: attr(data-text);
-  color: white;
   width: 0%;
   inset: 0;
-  border-right: 0.6rem solid white;
-  overflow: hidden;
+  border-right: 0.2rem solid white;
   transition: 0.5s;
-  -webkit-text-stroke: 1px white;
-  padding: 26px 0px;
 }
-.container-nav .button:hover .hover-text {
+.container-nav .button:hover .hover-text, .container-nav .button:hover .actual-text {
+  color: white;
+  -webkit-text-stroke: 1px white;
   width: 100%;
+  transition: 0.5s;
+  height: 100%;
   filter: drop-shadow(0 0 23px white);
   -webkit-filter: drop-shadow(0 0 23px white);
+  -webkit-transition: 0.5s;
+  -moz-transition: 0.5s;
+  -ms-transition: 0.5s;
+  -o-transition: 0.5s;
+  cursor: pointer;
 }
 .container-nav .nav {
   float: right;
   margin-right: 20px;
-  height: 6rem;
+  height: 100%;
 }
 .container-nav .nav li {
   display: inline-block;
-  line-height: 75px;
+  line-height: 6rem;
   margin: 0 5px;
-  height: 6rem;
+  height: 100%;
 }
 .container-nav .nav li a {
   color: #fff;
@@ -281,9 +288,17 @@ app-root {
 .principal .paso-paso {
   width: 100%;
   margin: 10px;
+  padding: 2rem;
+}
+.principal .paso-paso .title-paso {
+  margin-bottom: 2rem;
 }
 .principal .paso-paso .title-paso h2 {
   color: #058ed9;
+  margin-bottom: 0.3rem;
+}
+.principal .paso-paso .title-paso p {
+  font-size: 0.8rem;
 }
 .principal .paso-paso .info-paso {
   display: flex;
@@ -295,7 +310,7 @@ app-root {
   display: flex;
   flex-direction: column;
   align-items: center;
-  width: 80px;
+  width: 100px;
 }
 .principal .paso-paso .info-paso .paso .icon-paso {
   width: 50px;
@@ -309,6 +324,10 @@ app-root {
 }
 .principal .paso-paso .info-paso .paso h4 {
   color: #058ed9;
+  padding: 5px;
+}
+.principal .paso-paso .info-paso .paso p {
+  font-size: 0.75rem;
 }
 
 /* MAIN */
@@ -336,6 +355,7 @@ footer .informacion {
   /* padding automatico */
   padding: 1em 10%;
   padding-top: 0.5em;
+  place-items: center;
 }
 footer .informacion .col h3 {
   font-size: 0.9em;

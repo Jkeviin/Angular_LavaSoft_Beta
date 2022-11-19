@@ -117,7 +117,7 @@ $color-secondary: #2a3d45;
   list-style: none;
 }
 
-app-root {
+app-root, app-principal, app-pfaq  {
   @include reset-pm;
   font-family: 'Roboto', sans-serif;
   display: grid;
@@ -151,39 +151,48 @@ app-root {
     position: relative;
     text-transform: uppercase;
     color: transparent;
-    -webkit-text-stroke: 1px $color-primary;
-    padding: 26px 0px;
+    -webkit-text-stroke: 2px $color-primary;
+    height: 100%;
   }
-  /* this is the text, when you hover on button */
+
+  .actual-text{
+    transition: 0.5s;
+    width: 0%;
+  }
+
   .hover-text {
     position: absolute;
-    box-sizing: border-box;
     content: attr(data-text);
-    color: white;
     width: 0%;
     inset: 0;
-    border-right: 0.6rem solid white;
-    overflow: hidden;
+    border-right: 0.2rem solid white;
     transition: 0.5s;
-    -webkit-text-stroke: 1px white;
-    padding: 26px 0px;
   }
   /* hover */
-  .button:hover .hover-text {
+  .button:hover .hover-text, .button:hover .actual-text {
+    color: white;
+    -webkit-text-stroke: 1px white;
     width: 100%;
+    transition: 0.5s;
+    height: 100%;
     filter: drop-shadow(0 0 23px white);
     -webkit-filter: drop-shadow(0 0 23px white);
+    -webkit-transition: 0.5s;
+    -moz-transition: 0.5s;
+    -ms-transition: 0.5s;
+    -o-transition: 0.5s;
+    cursor: pointer;
   }
 
   .nav {
     float: right;
     margin-right: 20px;
-    height: 6rem;
+    height: 100%;
     li {
       display: inline-block;
-      line-height: 75px;
+      line-height: 6rem;
       margin: 0 5px;
-      height: 6rem;
+      height: 100%;
       a {
 
         @include nav("false", $color-primary);
@@ -327,10 +336,16 @@ app-root {
   .paso-paso{
     width: 100%;
     margin: 10px;
+    padding: 2rem;
     .title-paso{
       h2{
         color: $color-primary;
+        margin-bottom: 0.3rem;
       }
+      p{
+        font-size: 0.8rem;
+      }
+      margin-bottom: 2rem;
     }
     .info-paso{
       display: flex;
@@ -341,7 +356,7 @@ app-root {
         display: flex;
         flex-direction: column;
         align-items: center;
-        width: 80px;
+        width: 100px;
         .icon-paso{
           width: 50px;
           height: 50px;
@@ -354,6 +369,10 @@ app-root {
         }
         h4{
           color: $color-primary;
+          padding: 5px;
+        }
+        p{
+          font-size: 0.75rem;
         }
       }
     }
@@ -386,6 +405,7 @@ footer {
     /* padding automatico */
     padding:  1em 10%;
     padding-top: 0.5em;
+    place-items: center;
 
     .col{
       h3{
