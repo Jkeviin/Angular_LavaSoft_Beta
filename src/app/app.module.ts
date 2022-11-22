@@ -9,6 +9,7 @@ import { PrincipalComponent } from './paginas/principal/principal.component';
 import { AppRoutingModule } from './app-routing.module';
 import { PfaqComponent } from './paginas/pfaq/pfaq.component';
 import { FaqComponent } from './Componentes/faq/faq.component';
+import { PPeticionEmpresaComponent } from './paginas/p-peticion-empresa/p-peticion-empresa.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import { FaqComponent } from './Componentes/faq/faq.component';
     HeaderComponent,
     PrincipalComponent,
     PfaqComponent,
-    FaqComponent
+    FaqComponent,
+    PPeticionEmpresaComponent
   ],
   imports: [
     BrowserModule,

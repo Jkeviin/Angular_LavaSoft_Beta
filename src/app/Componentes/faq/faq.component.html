@@ -1,1 +1,17 @@
-<p>faq works!</p>
+<section class="faq">
+    <div class="header-faq">
+        <h1>FAQ - Preguntas Frecuentes</h1>
+    </div>
+    <div class="body-faq">
+        <!-- Pregunta normal y Respuesta desplegable Angular -->
+        <div class="container-pregunta" *ngFor="let pregunta of preguntas">
+            <div class="pregunta-faq" (click)="pregunta.toggle()">
+                <h3>{{pregunta.pregunta}}</h3>
+                <div class="icono" [ngClass]="{'icono-abierto': pregunta.abierto}"></div>  <!-- Lo que hace es que si la pregunta esta abierta, se le agrega la clase icono-abierto -->
+            </div>
+            <div class="respuesta-faq" *ngIf="pregunta.abierto">
+                <p>{{pregunta.respuesta}}</p>
+            </div>
+        </div>
+    </div>
+</section>

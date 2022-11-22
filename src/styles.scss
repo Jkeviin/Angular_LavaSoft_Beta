@@ -2,6 +2,7 @@
 
 $color-primary: #058ed9;
 $color-secondary: #2a3d45;
+$color-tertiary: #111B1F;
 
 @mixin reset-pm {
   padding: 0;
@@ -229,7 +230,7 @@ app-root, app-principal, app-pfaq  {
   /* Justify arriba */
   flex-direction: column;
   .header{
-    background-color: #111B1F;
+    background-color: $color-tertiary;
     padding: 40px;
     padding-bottom: 0;
     margin-bottom: 40px;
@@ -455,7 +456,7 @@ footer {
       }
 
       select{
-        background-color: #111B1F;
+        background-color: $color-tertiary;
         color: white;
         padding: 5px;
         border: none;
@@ -485,4 +486,93 @@ footer {
     }
   }
 }
+
+/* Header FAQ */
+
+
+.faq{
+  margin-top: 6rem;
+
+  .header-faq{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    margin-bottom: 2rem;
+    background-color: $color-tertiary;
+    padding: 2rem;
+    h1{
+      color: $color-primary;
+      margin-bottom: 0.3rem;
+    }
+  }
+
+  .body-faq{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    margin-bottom: 2rem;
+    padding: 1rem;
+
+    .container-pregunta{
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      width: 60%;
+
+      .pregunta-faq{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        padding: 1rem;
+        width: 100%;
+        border-bottom: 1px solid $color-primary;
+        cursor: pointer;
+
+        .icono{
+          width: 0;
+          height: 0;
+          border-left: 8px solid transparent;
+          border-right: 8px solid transparent;
+          border-top: 16px solid $color-primary;
+          margin-left: 1rem;
+          transition: all 0.3s ease;
+          -webkit-transition: all 0.3s ease;
+          -moz-transition: all 0.3s ease;
+          -ms-transition: all 0.3s ease;
+          -o-transition: all 0.3s ease;
+          
+        }
+
+        .icono-abierto{
+          transform: rotate(180deg);
+        }
+      }
+
+      .respuesta-faq{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        padding: 1rem;
+        width: 100%;
+        border-bottom: 2px solid $color-primary;
+        /* Fondo diferente */
+        background-color: $color-tertiary;
+        color: white;
+      }
+
+    }
+  }
+}
+
+
 
