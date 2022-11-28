@@ -2,33 +2,33 @@
 <footer>
     <div class="informacion">
       <div class="col">
-        <h3>Acerca de Lavasoft</h3>
+        <h3>{{'footer.Acerca.title' | translate}}</h3>
         <ul>
-          <li><a href="#">¿Quiénes somos?</a></li>
-          <li><a href="#">Confianza y Seguridad</a></li>
-          <li><a href="#">Recursos y políticas</a></li>
+          <li><a href="#">{{'footer.Acerca.quienes' | translate}}</a></li>
+          <li><a href="#">{{'footer.Acerca.confianza' | translate}}</a></li>
+          <li><a href="#">{{'footer.Acerca.recursos' | translate}}</a></li>
         </ul>
       </div>
       <div class="col">
-        <h3>¿Necesitas ayuda?</h3>
+        <h3>{{'footer.Ayuda.title' | translate}}</h3>
         <ul>
-          <li><a [routerLink]="['/faq']">Preguntas frecuentes</a></li>
-          <li><a href="#">Contactanos</a></li>
-          <li><a href="#">Términos y condiciones</a></li>
+          <li><a [routerLink]="['/faq']">{{'footer.Ayuda.preguntas' | translate}}s</a></li>
+          <li><a href="#">{{'footer.Ayuda.contactanos' | translate}}</a></li>
+          <li><a href="#">{{'footer.Ayuda.terminos' | translate}}</a></li>
         </ul>
       </div>
       <div class="col">
-        <h3>Idioma</h3>
-        <p>Esta es la versión de nuestro sitio web destinada a quienes hablen español en Colombia. Si eres residente de otro país o región, selecciona la versión correcta de LavaSoft para tu país o región en el menú desplegable.
-        </p>
+        <h3>{{'footer.Idioma.title' | translate}}</h3>
+        <p>{{'footer.Idioma.subtitle' | translate}}</p>
         <!-- Input para seleccionar idioma:  -->
-        <select name="idioma" id="idioma">
-          <option value="es">Español</option>
-          <option value="en">English</option>
+        <select name="idioma" id="idioma" #langSelect (change)="changeLang(langSelect.value)">
+          <option *ngFor="let lang of langs" [value]="lang">
+            {{ lang }}
+          </option>
         </select>
       </div>
       <div class="col">
-        <h3>Redes Sociales</h3>
+        <h3>{{'footer.Redes' | translate}}</h3>
         <ul class="redes">
           <li><a href="#"><i class="fa-brands fa-whatsapp"></i></a></li>
           <li><a href="#"><i class="fa-brands fa-facebook"></i></a></li>
@@ -40,9 +40,9 @@
       <ul>
         <li>© 2022 Lavasoft Industries
         </li>
-        <li><a href="#">Politica y Pricavidad</a></li>
-        <li><a href="#">Aviso Legal T&C</a></li>
-        <li><a href="#">Politica Cookies</a></li>
+        <li><a href="#">{{'footer.Credenciales.politica' | translate}}</a></li>
+        <li><a href="#">{{'footer.Credenciales.aviso' | translate}}</a></li>
+        <li><a href="#">{{'footer.Credenciales.cookies' | translate}}</a></li>
       </ul>
     </div>
   </footer>

@@ -1,0 +1,69 @@
+{
+    "footer":{
+        "Acerca":{
+            "title": "Acerca de Lavasoft",
+            "quienes": "¿Quiénes somos?",
+            "confianza": "Confianza y Seguridad",
+            "recursos": "Recursos y políticas"
+        },
+        "Ayuda":{
+            "title": "¿Necesitas ayuda?",
+            "preguntas": "¿Necesitas ayuda?",
+            "contactanos": "Contactanos",
+            "terminos": "Términos y condiciones"
+        },
+        "Idioma": {
+            "title": "Idioma",
+            "subtitle": "Esta es la versión de nuestro sitio web destinada a quienes hablen español en Colombia. Si eres residente de otro país o región, selecciona la versión correcta de LavaSoft para tu país o región en el menú desplegable."
+        },
+        "Redes": "Redes Sociales",
+        "Credenciales": {
+            "politica": "Politica y Pricavidad",
+            "aviso": "Aviso Legal T&C",
+            "cookies": "Politica Cookies"
+        }
+    },
+    "header": {
+        "Navbar": {
+            "inicio": "INICIO",
+            "lavaderos": "LAVADEROS",
+            "empresas": "EMPRESAS"
+        },
+        "Botones": {
+            "inicio": "INICIAR SESIÓN",
+            "crear": "CREAR CUENTA"
+        }
+    },
+    "main": {
+        "Header":{
+            "title": "No pierdas mas el tiempo esperando en Autolavados",
+            "subtitle": "Busca tu lavadero de preferencia y Agenda tu lavado de vehiculo.",
+            "navegador": {
+                "tipoVeh": "Tipo de Vehiculo",
+                "ubicacion": "Ubicación",
+                "servicio": "Servicio",
+                "fecha": "Fecha",
+                "select": "Seleccione una opción",
+                "button": "Buscar Lavadero"
+            }
+        },
+        "Paso": {
+            "title": "Paso a Paso",
+            "subtitle": "3 simples pasos para agendar el lavado de tu vehiculo.",
+            "pasos":{
+                "paso1": {
+                    "title": "Paso 1",
+                    "subtitle": "Busca tu lavadero de referencia"
+                },
+                "paso2": {
+                    "title": "Paso 2",
+                    "subtitle": "Agenda el servicio y la hora que desee"
+                },
+                "paso3": {
+                    "title": "Paso 3",
+                    "subtitle": "El lavadero te estará esperando"
+                }
+            }
+        }
+    }
+}

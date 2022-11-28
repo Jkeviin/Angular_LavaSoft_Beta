@@ -110,7 +110,7 @@ $color-tertiary: #111B1F;
   box-sizing: border-box;
   @include reset-pm;
   /* Quitar seleccion */
-  user-select: none;
+ // user-select: none;
   /* Quitar arrastrar */
   -webkit-user-drag: none;
   /* Quitar decoracion UL, A, LI */

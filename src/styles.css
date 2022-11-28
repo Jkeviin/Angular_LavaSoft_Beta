@@ -5,7 +5,6 @@
   padding: 0;
   margin: 0;
   /* Quitar seleccion */
-  user-select: none;
   /* Quitar arrastrar */
   -webkit-user-drag: none;
   /* Quitar decoracion UL, A, LI */
