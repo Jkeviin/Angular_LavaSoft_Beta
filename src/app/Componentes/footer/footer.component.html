@@ -12,7 +12,7 @@
       <div class="col">
         <h3>{{'footer.Ayuda.title' | translate}}</h3>
         <ul>
-          <li><a [routerLink]="['/faq']">{{'footer.Ayuda.preguntas' | translate}}s</a></li>
+          <li><a [routerLink]="['/faq']">{{'footer.Ayuda.preguntas' | translate}}</a></li>
           <li><a href="#">{{'footer.Ayuda.contactanos' | translate}}</a></li>
           <li><a href="#">{{'footer.Ayuda.terminos' | translate}}</a></li>
         </ul>
@@ -21,9 +21,9 @@
         <h3>{{'footer.Idioma.title' | translate}}</h3>
         <p>{{'footer.Idioma.subtitle' | translate}}</p>
         <!-- Input para seleccionar idioma:  -->
-        <select name="idioma" id="idioma" #langSelect (change)="changeLang(langSelect.value)">
+        <select name="idioma" id="idioma" #langSelect (change)="changeLang(langSelect.value)" >
           <option *ngFor="let lang of langs" [value]="lang">
-            {{ lang }}
+            {{ lang }}&nbsp;&nbsp;&nbsp;
           </option>
         </select>
       </div>

@@ -10,11 +10,13 @@ import { AppRoutingModule } from './app-routing.module';
 import { PfaqComponent } from './paginas/pfaq/pfaq.component';
 import { FaqComponent } from './Componentes/faq/faq.component';
 import { PPeticionEmpresaComponent } from './paginas/p-peticion-empresa/p-peticion-empresa.component';
+import { PeticionEmpresaComponent } from './Componentes/peticion-empresa/peticion-empresa.component';
 
 // Angular Translate (Dependencias)
 import { HttpClientModule, HttpClient } from '@angular/common/http';
 import { TranslateModule, TranslateLoader } from '@ngx-translate/core';
 import { TranslateHttpLoader } from '@ngx-translate/http-loader';
+
 
 @NgModule({
   declarations: [
@@ -25,7 +27,8 @@ import { TranslateHttpLoader } from '@ngx-translate/http-loader';
     PrincipalComponent,
     PfaqComponent,
     FaqComponent,
-    PPeticionEmpresaComponent
+    PPeticionEmpresaComponent,
+    PeticionEmpresaComponent
   ],
   imports: [
     BrowserModule,

@@ -8,12 +8,13 @@
     <div class="buscador">
       <div class="seccion-input">
         <div class="filtro">
-          <p>{{'main.Header.navegador.tipoVeh' | translate}}</p>
+          <p>{{'main.Header.navegador.tipoVeh.title' | translate}}</p>
           <select name="" id="" value>
             <option value="">{{'main.Header.navegador.select' | translate}}&nbsp;&nbsp;</option>
-            <option value="">Carro</option>
-            <option value="">Moto</option>
-            <option value="">Camioneta</option>
+            <!-- Bucle *ngFor para recorrer array de .json de angular translate -->
+            <option *ngFor="let tipos of ('main.Header.navegador.tipoVeh.tipos' | translate)">
+              {{tipos}}
+            </option>
           </select>
         </div>
         <div class="filtro">

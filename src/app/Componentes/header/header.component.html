@@ -14,13 +14,13 @@
     </ul>
     <ul class="nav">
       <li>
-        <a><span class="active hover-underline-animation"> {{'header.Navbar.inicio' | translate}} </span></a>
+        <a [routerLink]="['/principal']"><span class="hover-underline-animation" [routerLinkActive]="['active']"> {{'header.Navbar.inicio' | translate}} </span></a>
       </li>
       <li>
-        <a><span class="hover-underline-animation"> {{'header.Navbar.lavaderos' | translate}} </span></a>
+        <a><span class="hover-underline-animation" [routerLinkActive]="['active']"> {{'header.Navbar.lavaderos' | translate}} </span></a>
       </li>
       <li>
-        <a><span class="hover-underline-animation"> {{'header.Navbar.empresas' | translate}} </span></a>
+        <a [routerLink]="'/peticion-empresa'"><span class="hover-underline-animation" [routerLinkActive]="['active']"> {{'header.Navbar.empresas' | translate}} </span></a>
       </li>
     </ul>
   </nav>

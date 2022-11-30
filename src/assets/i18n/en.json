@@ -1,69 +1,90 @@
 {
-    "footer":{
-        "Acerca":{
-            "title": "About Lavasoft",
-            "quienes": "Who are we?",
-            "confianza": "Confidence and Security",
-            "recursos": "Resources and policies"
-        },
-        "Ayuda":{
-            "title": "Need help?",
-            "preguntas": "Frequently Asked Questions",
-            "contactanos": "Contact us",
-            "terminos": "Terms and Conditions"
-        },
-        "Idioma": {
-            "title": "Language",
-            "subtitle": "This is the version of our website intended for English. If you are a resident of another country or region, please select the correct version of LavaSoft for your country or region from the drop-down menu."
-        },
-        "Redes": "Social Networking",
-        "Credenciales": {
-            "politica": "Politics and Christmas",
-            "aviso": "Legal Notice T&C",
-            "cookies": "Cookies Policy"
-        }
+  "footer": {
+    "Acerca": {
+      "title": "About Lavasoft",
+      "quienes": "Who are we?",
+      "confianza": "Confidence and Security",
+      "recursos": "Resources and policies"
     },
-    "header": {
-        "Navbar": {
-            "inicio": "HOME",
-            "lavaderos": "CAR WASHERS",
-            "empresas": "BUSINESS"
-        },
-        "Botones": {
-            "inicio": "LOG IN",
-            "crear": "CREATE ACCOUNT"
-        }
+    "Ayuda": {
+      "title": "Need help?",
+      "preguntas": "Frequently Asked Questions",
+      "contactanos": "Contact us",
+      "terminos": "Terms and Conditions"
     },
-    "main": {
-        "Header":{
-            "title": "Don't waste any more time waiting at Car washes",
-            "subtitle": "Find your preferred car wash and Schedule your vehicle wash.",
-            "navegador": {
-                "tipoVeh": "Vehicle Type",
-                "ubicacion": "Location",
-                "servicio": "Service",
-                "fecha": "Date",
-                "select": "Select an option",
-                "button": "Search car wash"
-            }
-        },
-        "Paso": {
-            "title": "Step by Step",
-            "subtitle": "3 simple steps to schedule your vehicle wash.",
-            "pasos":{
-                "paso1": {
-                    "title": "Step 1",
-                    "subtitle": "Search for your reference car wash"
-                },
-                "paso2": {
-                    "title": "Step 2",
-                    "subtitle": "Schedule the service and time you want"
-                },
-                "paso3": {
-                    "title": "Step 3",
-                    "subtitle": "The car wash will be waiting for you"
-                }
-            }
-        }
+    "Idioma": {
+      "title": "Language",
+      "subtitle": "This is the version of our website intended for English. If you are a resident of another country or region, please select the correct version of LavaSoft for your country or region from the drop-down menu."
+    },
+    "Redes": "Social Networking",
+    "Credenciales": {
+      "politica": "Politics and Christmas",
+      "aviso": "Legal Notice T&C",
+      "cookies": "Cookies Policy"
     }
+  },
+  "header": {
+    "Navbar": {
+      "inicio": "HOME",
+      "lavaderos": "CAR WASHERS",
+      "empresas": "BUSINESS"
+    },
+    "Botones": {
+      "inicio": "LOG IN",
+      "crear": "CREATE ACCOUNT"
+    }
+  },
+  "main": {
+    "Header": {
+      "title": "Don't waste any more time waiting at Car washes",
+      "subtitle": "Find your preferred car wash and Schedule your vehicle wash.",
+      "navegador": {
+        "tipoVeh": {
+          "title": "Vehicle Type",
+          "tipos": ["Car", "Motorcycle", "Truck"]
+        },
+        "ubicacion": "Location",
+        "servicio": "Service",
+        "fecha": "Date",
+        "select": "Select an option",
+        "button": "Search car wash"
+      }
+    },
+    "Paso": {
+      "title": "Step by Step",
+      "subtitle": "3 simple steps to schedule your vehicle wash.",
+      "pasos": {
+        "paso1": {
+          "title": "Step 1",
+          "subtitle": "Search for your reference car wash"
+        },
+        "paso2": {
+          "title": "Step 2",
+          "subtitle": "Schedule the service and time you want"
+        },
+        "paso3": {
+          "title": "Step 3",
+          "subtitle": "The car wash will be waiting for you"
+        }
+      }
+    }
+  },
+  "empresas": {
+    "Informacion": {
+      "title": "LavaSoft for Business",
+      "subtitle": "Get in touch with us to be part of Lavasoft and thus improve your business.",
+      "guia": "Complete the form and some of our commercial advisors will contact you."
+    },
+    "Formulario": {
+      "nombrePersona": "Name and surname",
+      "nombreEmpresa": "Company name",
+      "correo": "Email",
+      "telefono": "Phone number",
+      "ubicacion": "Location",
+      "button": "Send"
+    }
+  },
+  "faq": {
+    "Title": "Frequent questions"
+  }
 }
