@@ -9,7 +9,8 @@
                 <h3>{{pregunta.pregunta}}</h3>
                 <div class="icono" [ngClass]="{'icono-abierto': pregunta.abierto}"></div>  <!-- Lo que hace es que si la pregunta esta abierta, se le agrega la clase icono-abierto -->
             </div>
-            <div class="respuesta-faq" *ngIf="pregunta.abierto">
+            <!-- Animacion Toggle -->
+            <div class="respuesta-faq" *ngIf="pregunta.abierto" [@toggle]="pregunta.abierto">
                 <p>{{pregunta.respuesta}}</p>
             </div>
         </div>

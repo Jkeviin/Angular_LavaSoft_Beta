@@ -246,12 +246,12 @@ app-p-peticion-empresa {
       h1 {
         margin: 0;
         color: $color-primary;
-        font-size: 4rem;
+        font-size: 3.5rem;
       }
       h3 {
         margin: 0;
         color: #fff;
-        font-size: 2rem;
+        font-size: 1.5rem;
         font-weight: 200;
       }
     }
@@ -533,6 +533,7 @@ footer {
       justify-content: center;
       text-align: center;
       width: 60%;
+      
 
       .pregunta-faq {
         display: flex;
@@ -544,6 +545,7 @@ footer {
         width: 100%;
         border-bottom: 1px solid $color-primary;
         cursor: pointer;
+        
 
         .icono {
           width: 0;
@@ -573,8 +575,7 @@ footer {
         padding: 1rem;
         width: 100%;
         border-bottom: 2px solid $color-primary;
-        /* Fondo diferente */
-        background-color: $color-tertiary;
+        /*Fondodiferente*/background-color: $color-tertiary;
         color: white;
       }
     }

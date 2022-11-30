@@ -186,12 +186,12 @@ app-p-peticion-empresa {
 .main-container .header .title h1 {
   margin: 0;
   color: #058ed9;
-  font-size: 4rem;
+  font-size: 3.5rem;
 }
 .main-container .header .title h3 {
   margin: 0;
   color: #fff;
-  font-size: 2rem;
+  font-size: 1.5rem;
   font-weight: 200;
 }
 .main-container .header .buscador {
@@ -506,7 +506,7 @@ footer .credenciales ul li a {
   padding: 1rem;
   width: 100%;
   border-bottom: 2px solid #058ed9;
-  /* Fondo diferente */
+  /*Fondodiferente*/
   background-color: #111b1f;
   color: white;
 }
